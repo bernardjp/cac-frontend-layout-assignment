@@ -1,6 +1,53 @@
 body {
-  /*  -- Remove for prod -- */
+  /*  -- Remove for production -- */
   background-image: url("../layout_reference.jpg");
   background-size: 100vw;
-  /* -- -- */
+  /* -- Remove for production -- */
+
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* ---- HEADER ----*/
+#main-header {
+  align-items: center;
+  background-color: #353a40;
+  display: flex;
+  height: 115px;
+  justify-content: space-between;
+  padding: 0px 9rem 0 8.4rem; /* left padding adjusted to accomodate the logo */
+}
+
+.header-links {
+  color: white;
+  cursor: pointer;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+#header-logo {
+  align-items: center;
+  color: white;
+  display: flex;
+  text-decoration: none;
+}
+
+#header-logo span {
+  font-size: 1.8rem;
+  padding-bottom: 12px;
+}
+
+#header-logo img {
+  height: 86px;
+}
+
+#header-navbar {
+  display: flex;
+  gap: 24px;
+  padding-bottom: 5px;
+}
+
+#header-navbar a:last-child {
+  color: green;
+  font-size: 1.5rem;
 }
