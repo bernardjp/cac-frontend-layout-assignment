@@ -14,19 +14,34 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Inter", sans-serif !important;
 }
 
+/* ---- GENERAL ---- */
 body {
   /*  -- Remove for production ↓↓ -- */
   background-image: url("../layout_reference.jpg");
   background-size: calc(100vw - 18px);
   /* -- Remove for production ↑↑ -- */
-
-  margin: 0;
-  font-family: "Inter", sans-serif;
 }
 
-/* ---- HEADER ↓↓ ----*/
+button {
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  font-size: inherit;
+  padding: 0.45rem 0.8rem;
+}
+
+/* ---- UTILITIES ---- */
+.btn-green {
+  background-color: var(--theme-green-m);
+  border-color: var(--theme-green-m);
+}
+
+/* ---- HEADER ↓↓ ---- */
 #main-header {
   align-items: center;
   background-color: #353a40;
@@ -67,15 +82,58 @@ body {
 }
 
 #header-navbar a:last-child {
-  color: green;
+  color: var(--theme-green-m);
+  font-weight: bold;
 }
 /* ---- HEADER ↑↑ ----*/
 
 /* ---- MAIN ↓↓ ----*/
+/* -- HERO ↓↓ --*/
 #hero-section {
-  background-color: #ff000045;
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: row-reverse;
   height: calc(100vh - var(--header-height));
+  padding: 0rem 7rem 0 6rem;
+  position: relative;
 }
+
+#hero-section article {
+  display: flex;
+  flex-direction: column;
+  line-height: 26px;
+  padding-top: 5.5rem;
+  text-align: right;
+  width: 50%;
+  z-index: 2;
+}
+
+#hero-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#hero-section nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: end;
+}
+
+#hero-carousel {
+  align-items: center;
+  background-color: var(--theme-blue-d);
+  display: flex;
+  filter: brightness(0.45);
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+/* -- HERO ↑↑ --*/
 
 #oradores-section {
   background-color: #00ffbf45;
