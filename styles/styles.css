@@ -1,6 +1,122 @@
-body {
-  /*  -- Remove for prod -- */
-  background-image: url("../Modelo\ maqueta\ -\ integrador\ front.jpg");
-  background-size: 100vw;
-  /* -- -- */
+:root {
+  --header-height: 84px;
+  --footer-height: 84px;
+  --theme-grey: #353a40;
+  --theme-green-l: #96c93e;
+  --theme-green-m: #29a744;
+  --theme-yellow: #fdc005;
+  --theme-blue-l: #16a1b8;
+  --theme-blue-m: #1c5170;
+  --theme-blue-d: #1b3542;
+  --theme-red: #da3546;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*  -- Remove for production ↓↓ -- */
+  background-image: url("../layout_reference.jpg");
+  background-size: calc(100vw - 18px);
+  /* -- Remove for production ↑↑ -- */
+
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* ---- HEADER ↓↓ ----*/
+#main-header {
+  align-items: center;
+  background-color: #353a40;
+  display: flex;
+  height: var(--header-height);
+  justify-content: space-between;
+  padding: 0px 6.5rem 0 6rem; /* left padding adjusted to accomodate the logo */
+  position: sticky;
+}
+
+.header-links {
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+#header-logo {
+  align-items: center;
+  color: white;
+  display: flex;
+  text-decoration: none;
+}
+
+#header-logo span {
+  font-size: 1.3rem;
+  padding-bottom: 12px;
+}
+
+#header-logo img {
+  height: 62px;
+}
+
+#header-navbar {
+  display: flex;
+  gap: 19px;
+  padding-bottom: 7px;
+}
+
+#header-navbar a:last-child {
+  color: green;
+}
+/* ---- HEADER ↑↑ ----*/
+
+/* ---- MAIN ↓↓ ----*/
+#hero-section {
+  background-color: #ff000045;
+  height: calc(100vh - var(--header-height));
+}
+
+#oradores-section {
+  background-color: #00ffbf45;
+  height: 100vh; /* cambiar para que se ajuste a contentido luego*/
+}
+
+#destinos-section {
+  background-color: #ff007745;
+  height: 100vh; /* cambiar para que se ajuste a contentido luego*/
+}
+
+#form-section {
+  background-color: #00ff2a45;
+  height: 100vh; /* cambiar para que se ajuste a contentido luego*/
+}
+/* ---- MAIN ↑↑ ----*/
+
+/* ---- FOOTER ↓↓ ----*/
+footer {
+  background: rgb(27,53,66);
+  background: linear-gradient(90deg, rgba(27,53,66,1) 0%, rgba(28,81,112,1) 100%); 
+  height: var(--footer-height);
+  padding: 0px 9.5rem 0 10.5rem;
+}
+
+#footer-nav {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#footer-nav a {
+  align-items: center;
+  color: white;
+  display: flex;
+  font-size: 0.84rem;
+  justify-content: center;
+  line-height: 1.4rem;
+  max-width: 80px;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+/* ---- FOOTER ↑↑ ----*/

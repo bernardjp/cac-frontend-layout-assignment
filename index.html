@@ -4,10 +4,114 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter">
   <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
   <title>Codo a Codo 4.0</title>
 </head>
 <body>
-  <h1>CODO a CODO 4.0</h1>
+  <header id="main-header">
+    <div id="header-logo">
+      <a href="/">
+        <img id="header-img" src="./assets/images/codoacodo.png" alt="cac_logo">
+      </a>
+      <span>Conf Bs As</span>
+    </div>
+    <nav id="header-navbar">
+      <a class="header-links" href="/conferencia">La conferencia</a> <!-- Apunta al hero -->
+      <a class="header-links" href="/oradores">Los oradores</a> <!-- Apunta a oradores -->
+      <a class="header-links" href="/lugar">El lugar y la fecha</a> <!-- Apunta a destino -->
+      <a class="header-links" href="/unete">Conviértete en orador</a> <!-- Apunta al formulario -->
+      <a class="header-links" href="/comprar" target="_blank">Comprar tickets</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="hero-section">
+      <article>
+        <h2>Conf BS As</h2>
+        <p>Bs As llega por primera vez a Argentina. un evento para compartir con nuestra comunidad el conocimiento y experiencia de los experto que están creando el futuro de Internet. Ven a conocer a miembros del evente, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!
+        </p>
+        <div>
+          <button>Quiero ser orador</button>
+          <button>Comprar tickets</button>
+        </div>
+      </article>
+      <div>Hero Carousel -Background images only-</div>
+    </section>
+
+    <section id="oradores-section">
+      <div> <!-- section title -->
+        <span>conoce a los</span>
+        <h2>oradores</h2>
+      </div>
+      <div> <!-- cards container -->
+
+        <div>  <!-- card ↓↓ -->
+          <img src="/" alt="card_img">
+          <div>
+            <header>
+              <div>
+                <span>JavaScript</span>
+                <span>React</span>
+              </div>
+              <h4>Steve Jobs</h4>
+            </header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis architecto harum commodi natus officiis similique quisquam qui deleniti eligendi adipisci ex, repellendus molestias aperiam quod autem expedita maiores totam? Architecto.
+            </p>
+          </div>
+        </div> <!-- card ↑↑ -->
+
+      </div>
+    </section>
+
+    <section id="destinos-section">
+      <img src="/" alt="city_img">
+      <article>
+        <h2>BS As - Octubre</h2>
+        <p>Buenos Aires es la provincia y localidad más grande del estado de Argentina, en los Estados Unidos. Honolulu es la más sureña de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el condade de Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad (aproximadamente 600 km2 de superficie).
+        </p>
+        <button>Conocé más</button>
+      </article>
+    </section>
+
+    <section id="form-section">
+      <div> <!-- section title -->
+        <span>conviértete en un</span>
+        <h2>orador</h2>
+      </div>
+      <p>Anótate como orador para dar una charla ignite. Cuéntanos de qué quieres hablar!</p>
+      <form action="/" method="post">
+        <div>
+          <label for="name">
+            <input type="text" id="name" name="name" placeholder="Nombre">
+          </label>
+          <label for="last-name">
+            <input type="text" id="last-name" name="last-name" placeholder="Apellido">
+          </label>
+        </div>
+        <label for="message">
+          <textarea id="message" name="message" placeholder="Sobre qué quieres hablar?">
+          </textarea>
+          <span>Recuerda incluir un título para tu charla</span>
+        </label>
+        <input type="submit" value="Enviar">
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <nav id="footer-nav">
+      <a href="/faq" target="_blank">Preguntas frecuentes</a>
+      <a href="/contactanos" target="_blank">Contáctanos</a>
+      <a href="/info/prensa" target="_blank">Prensa</a>
+      <a href="/conferencias" target="_blank">Conferencias</a>
+      <a href="/faq/terminos_y_condiciones" target="_blank">Términos y condiciones</a>
+      <a href="/privacidad" target="_blank">Privacidad</a>
+      <a href="/info/estudiantes" target="_blank">Estudiantes</a>
+    </nav>
+  </footer>
 </body>
 </html>
