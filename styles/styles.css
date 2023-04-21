@@ -11,10 +11,15 @@
   --theme-red: #da3546;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   /*  -- Remove for production ↓↓ -- */
   background-image: url("../layout_reference.jpg");
-  background-size: 100vw;
+  background-size: calc(100vw - 18px);
   /* -- Remove for production ↑↑ -- */
 
   margin: 0;
@@ -93,7 +98,7 @@ footer {
   background: rgb(27,53,66);
   background: linear-gradient(90deg, rgba(27,53,66,1) 0%, rgba(28,81,112,1) 100%); 
   height: var(--footer-height);
-  padding: 0px 9rem 0 11rem;
+  padding: 0px 9.5rem 0 10.5rem;
 }
 
 #footer-nav {
