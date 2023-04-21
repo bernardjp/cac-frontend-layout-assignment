@@ -2,8 +2,13 @@
   --header-height: 84px;
   --footer-height: 84px;
   --theme-grey: #353a40;
-  --theme-green: #29a744;
-  --theme-yellow: 
+  --theme-green-l: #96c93e;
+  --theme-green-m: #29a744;
+  --theme-yellow: #fdc005;
+  --theme-blue-l: #16a1b8;
+  --theme-blue-m: #1c5170;
+  --theme-blue-d: #1b3542;
+  --theme-red: #da3546;
 }
 
 body {
@@ -23,7 +28,7 @@ body {
   display: flex;
   height: var(--header-height);
   justify-content: space-between;
-  padding: 0px 6.5rem 0 6rem;; /* left padding adjusted to accomodate the logo */
+  padding: 0px 6.5rem 0 6rem; /* left padding adjusted to accomodate the logo */
   position: sticky;
 }
 
@@ -62,12 +67,51 @@ body {
 /* ---- HEADER ↑↑ ----*/
 
 /* ---- MAIN ↓↓ ----*/
-main section {
-  height: calc(100vh - var(--header-height));
-}
-
 #hero-section {
   background-color: #ff000045;
   height: calc(100vh - var(--header-height));
 }
+
+#oradores-section {
+  background-color: #00ffbf45;
+  height: 100vh; /* cambiar para que se ajuste a contentido luego*/
+}
+
+#destinos-section {
+  background-color: #ff007745;
+  height: 100vh; /* cambiar para que se ajuste a contentido luego*/
+}
+
+#form-section {
+  background-color: #00ff2a45;
+  height: 100vh; /* cambiar para que se ajuste a contentido luego*/
+}
 /* ---- MAIN ↑↑ ----*/
+
+/* ---- FOOTER ↓↓ ----*/
+footer {
+  background: rgb(27,53,66);
+  background: linear-gradient(90deg, rgba(27,53,66,1) 0%, rgba(28,81,112,1) 100%); 
+  height: var(--footer-height);
+  padding: 0px 9rem 0 11rem;
+}
+
+#footer-nav {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#footer-nav a {
+  align-items: center;
+  color: white;
+  display: flex;
+  font-size: 0.84rem;
+  justify-content: center;
+  line-height: 1.4rem;
+  max-width: 80px;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+/* ---- FOOTER ↑↑ ----*/
