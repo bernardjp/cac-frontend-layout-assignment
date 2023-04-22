@@ -30,7 +30,6 @@
   </header>
 
   <main>
-
     <section id="hero-section">
       <article>
         <h2>Conf Bs As</h2>
@@ -59,12 +58,11 @@
     </section>
 
     <section id="cards-section">
-      <div id="cards-section-title"> <!-- section title -->
+      <div class="section-title">
         <span>conoce a los</span>
         <h2>oradores</h2>
       </div>
-      <div id="cards-container"> <!-- cards container -->
-
+      <div id="cards-container">
         <div class="card">
           <img class="card-image" src="./assets/images/steve.jpg" alt="steve_img">
           <div class="card-content">
@@ -109,7 +107,6 @@
             </p>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -126,13 +123,13 @@
     </section>
 
     <section id="form-section">
-      <div> <!-- section title -->
+      <div class="section-title">
         <span>conviértete en un</span>
         <h2>orador</h2>
       </div>
       <p>Anótate como orador para dar una charla ignite. Cuéntanos de qué quieres hablar!</p>
-      <form action="/" method="post">
-        <div>
+      <form id="form-container" action="/" method="post">
+        <div id="form-personal-input">
           <label for="name">
             <input type="text" id="name" name="name" placeholder="Nombre">
           </label>
@@ -141,14 +138,12 @@
           </label>
         </div>
         <label for="message">
-          <textarea id="message" name="message" placeholder="Sobre qué quieres hablar?">
-          </textarea>
-          <span>Recuerda incluir un título para tu charla</span>
+          <textarea id="message" name="message" rows="3" placeholder="Sobre qué quieres hablar?"></textarea>
         </label>
-        <input type="submit" value="Enviar">
+        <span>Recuerda incluir un título para tu charla</span>
+        <input id="btn-submit" type="submit" value="Enviar">
       </form>
     </section>
-
   </main>
 
   <footer>
