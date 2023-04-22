@@ -41,6 +41,23 @@ button {
   border-color: var(--theme-green-m);
 }
 
+.badge-yellow {
+  background-color: var(--theme-yellow);
+  color: black;
+}
+.badge-blue {
+  background-color: var(--theme-blue-l);
+  color: white;
+}
+.badge-red {
+  background-color: var(--theme-red);
+  color: white;
+}
+.badge-grey {
+  background-color: var(--theme-grey);
+  color: white;
+}
+
 /* ---- HEADER ↓↓ ---- */
 #main-header {
   align-items: center;
@@ -135,15 +152,107 @@ button {
 }
 /* -- HERO ↑↑ --*/
 
-#oradores-section {
-  background-color: #00ffbf45;
+/* -- ORADORES ↓↓ --*/
+#cards-section {
+  background-color: rgb(255, 255, 255);
   height: 100vh; /* cambiar para que se ajuste a contentido luego*/
 }
 
-#destinos-section {
-  background-color: #ff007745;
-  height: 100vh; /* cambiar para que se ajuste a contentido luego*/
+#cards-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 12rem;
 }
+
+#cards-section-title {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  text-transform: uppercase;
+}
+
+#cards-section-title span {
+  font-size: 0.75rem;
+}
+
+#cards-section-title h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card {
+  background-color: transparent;
+  border: none;
+}
+
+.card-image {
+  background-color: var(--theme-blue-m);
+  color: white;
+}
+
+.card-content {
+  padding: 1.1rem;
+}
+
+.card-badge {
+  border-radius: 3px;
+  border: none;
+  font-size: 0.6rem;
+  font-weight: bold;
+  padding: 3px 5px;
+  text-align: center;
+}
+
+.card-name {
+  font-size: 1.05rem;
+  font-weight: bold;
+  margin-top: 0.6rem;
+}
+
+.card-text {
+  font-size: 0.75rem;
+  line-height: 22px;
+}
+/* -- ORADORES ↑↑ --*/
+
+/* -- DESTINO ↓↓ -- */
+#destinos-section {
+  background-color: var(--theme-grey);
+  color: white;
+  display: grid;
+  font-size: 0.75rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+#destinos-section figure {
+  margin: 0;
+}
+
+#destinos-section article {
+  padding: 1.1rem 0.5rem;
+}
+
+#destinos-section h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#destinos-section p {
+  line-height: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
+#destinos-section button{
+  padding: 0.2rem 0.4rem;
+}
+
+#destino-img {
+  width: 100%;
+}
+/* -- DESTINO ↑↑ -- */
 
 #form-section {
   background-color: #00ff2a45;
