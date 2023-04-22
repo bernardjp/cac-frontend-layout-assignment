@@ -218,10 +218,41 @@ button {
 }
 /* -- ORADORES ↑↑ --*/
 
+/* -- DESTINO ↓↓ -- */
 #destinos-section {
-  background-color: #ff007745;
-  height: 100vh; /* cambiar para que se ajuste a contentido luego*/
+  background-color: var(--theme-grey);
+  color: white;
+  display: grid;
+  font-size: 0.75rem;
+  grid-template-columns: 1fr 1fr;
 }
+
+#destinos-section figure {
+  margin: 0;
+}
+
+#destinos-section article {
+  padding: 1.1rem 0.5rem;
+}
+
+#destinos-section h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#destinos-section p {
+  line-height: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
+#destinos-section button{
+  padding: 0.2rem 0.4rem;
+}
+
+#destino-img {
+  width: 100%;
+}
+/* -- DESTINO ↑↑ -- */
 
 #form-section {
   background-color: #00ff2a45;
