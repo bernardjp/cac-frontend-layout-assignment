@@ -1,6 +1,7 @@
 :root {
   --header-height: 84px;
   --footer-height: 84px;
+  --theme-grey-l: #999c9f;
   --theme-grey: #353a40;
   --theme-green-l: #96c93e;
   --theme-green-m: #29a744;
@@ -18,10 +19,10 @@
 }
 
 /* ---- GENERAL ---- */
-/* body {
+body {
   background-image: url("../layout_reference.jpg");
   background-size: calc(100vw - 18px);
-} */
+}
 
 button {
   background-color: transparent;
@@ -31,6 +32,27 @@ button {
   cursor: pointer;
   font-size: inherit;
   padding: 0.45rem 0.8rem;
+  transition: 0.2s;
+}
+
+.anchor-btn {
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  font-size: inherit;
+  padding: 0.45rem 0.8rem;
+  text-decoration: none;
+  transition: 0.1s;
+}
+.anchor-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+.anchor-btn:active {
+  background-color: white;
+  color: var(--theme-grey);
 }
 
 .section-title {
@@ -54,7 +76,11 @@ button {
 /* ---- UTILITIES ---- */
 .btn-green {
   background-color: var(--theme-green-m);
-  border-color: var(--theme-green-m);
+  border: 1px solid var(--theme-green-m);
+}
+.btn-green:hover {
+  background-color: var(--theme-green-l);
+  border: 1px solid var(--theme-green-l);
 }
 
 .badge-yellow {
@@ -102,7 +128,6 @@ button {
 
 #header-logo span {
   font-size: 1.3rem;
-  padding-bottom: 12px;
 }
 
 #header-logo img {
@@ -112,12 +137,30 @@ button {
 #header-navbar {
   display: flex;
   gap: 19px;
-  padding-bottom: 7px;
+}
+
+#header-navbar a {
+  border-bottom: 2px solid transparent;
+  color: var(--theme-grey-l);
+  transition: 0.2s;
+}
+#header-navbar a:hover {
+  color: white;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+}
+
+#header-navbar a:first-child {
+  color: white;
 }
 
 #header-navbar a:last-child {
   color: var(--theme-green-m);
   font-weight: bold;
+  transition: 0.2s;
+}
+#header-navbar a:last-child:hover {
+  border-bottom: 2px solid var(--theme-green-l);
+  color: var(--theme-green-l);
 }
 
 #header-dropdown {
@@ -203,16 +246,27 @@ button {
   z-index: 2;
 }
 
-#hero-section a {
-  background-color: transparent;
+/* #hero-section a {
   border-radius: 5px;
-  border: 1px solid white;
   color: white;
   cursor: pointer;
   font-size: inherit;
   padding: 0.45rem 0.8rem;
   text-decoration: none;
-}
+  transition: 0.2s;
+} */
+/* #hero-section a:first-child {
+  background-color: transparent;
+  border: 1px solid white;
+} */
+/* #hero-section a:first-child:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+} */
+/* #hero-section a:first-child:active {
+  background-color: white;
+  color: var(--theme-grey);
+} */
 
 #hero-section h2 {
   font-size: 2rem;
@@ -240,7 +294,7 @@ button {
 /* -- HERO ↑↑ -- */
 /* -- ORADORES ↓↓ -- */
 #cards-section {
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   height: 100vh; /* cambiar para que se ajuste a contentido luego*/
 }
 
@@ -313,7 +367,7 @@ button {
   margin-bottom: 0.6rem;
 }
 
-#destinos-section button{
+#destinos-section .anchor-btn {
   padding: 0.2rem 0.4rem;
 }
 
@@ -379,6 +433,10 @@ textarea {
   font-size: 1rem;
   margin-top: 1rem;
   padding: 0.5rem;
+  transition: 0.2s;
+}
+#btn-submit:hover {
+  background-color: var(--theme-green-m);
 }
 /* -- FORM ↑↑ -- */
 /* ---- MAIN ↑↑ ---- */
@@ -392,25 +450,34 @@ footer {
 }
 
 #footer-nav {
-  height: 100%;
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 5rem;
+  height: 100%;
   justify-content: center;
   min-height: var(--footer-height);
 }
 
 #footer-nav a {
   align-items: center;
+  border-bottom: 2px solid transparent;
   color: white;
   display: flex;
   font-size: 0.84rem;
+  height: inherit;
   justify-content: center;
   line-height: 1.4rem;
   max-width: 80px;
-  padding: 1rem;
+  padding: 0.2rem 0;
   text-align: center;
   text-decoration: none;
+  transition: 0.15s;
+  width: min-content;
+}
+
+#footer-nav a:hover {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.75);
 }
 /* ---- FOOTER ↑↑ ---- */
 
