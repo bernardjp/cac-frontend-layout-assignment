@@ -18,12 +18,10 @@
 }
 
 /* ---- GENERAL ---- */
-body {
-  /*  -- Remove for production ↓↓ -- */
+/* body {
   background-image: url("../layout_reference.jpg");
   background-size: calc(100vw - 18px);
-  /* -- Remove for production ↑↑ -- */
-}
+} */
 
 button {
   background-color: transparent;
@@ -85,6 +83,7 @@ button {
   justify-content: space-between;
   padding: 0px 6.5rem 0 6rem; /* left padding adjusted to accomodate the logo */
   position: sticky;
+  z-index: 3;
 }
 
 .header-links {
@@ -120,16 +119,76 @@ button {
   color: var(--theme-green-m);
   font-weight: bold;
 }
-/* ---- HEADER ↑↑ ----*/
 
-/* ---- MAIN ↓↓ ----*/
-/* -- HERO ↓↓ --*/
+#header-dropdown {
+  display: none;
+}
+
+#dropdown-button {
+  background-color: var(--theme-grey);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  fill: white;
+  height: 48px;
+  padding: 0.5rem;
+  position: relative;
+  width: 48px;
+}
+#dropdown-button > #xmark-icon {
+  bottom: 0;
+  display: none;
+  position: absolute;
+  right: 9px;
+  top: 5px;
+  width: 60%;
+}
+
+#dropdown-button.show {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+#dropdown-button.show > #menu-icon {
+  display: none;
+}
+#dropdown-button.show > #xmark-icon {
+  display: block;
+}
+
+#dropdown-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+#dropdown-button::after {
+  display: none;
+}
+
+#dropdown-navbar {
+  background-color: var(--theme-grey);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  width: 15rem;
+}
+
+#dropdown-navbar a:last-child {
+  color: var(--theme-green-m);
+  font-weight: bold;
+}
+
+.dropdown-item { /* overwrites the Bootstrap class */
+  padding: 1rem;
+}
+.dropdown-item:hover { /* overwrites the Bootstrap class */
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+/* ---- HEADER ↑↑ ---- */
+
+/* ---- MAIN ↓↓ ---- */
+/* -- HERO ↓↓ -- */
 #hero-section {
   align-items: center;
   color: white;
   display: flex;
   flex-direction: row-reverse;
   height: calc(100vh - var(--header-height));
+  overflow: hidden;
   padding: 0rem 7rem 0 6rem;
   position: relative;
 }
@@ -140,8 +199,19 @@ button {
   line-height: 26px;
   padding-top: 5.5rem;
   text-align: right;
-  width: 50%;
+  max-width: 580px;
   z-index: 2;
+}
+
+#hero-section a {
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  font-size: inherit;
+  padding: 0.45rem 0.8rem;
+  text-decoration: none;
 }
 
 #hero-section h2 {
@@ -160,7 +230,6 @@ button {
   background-color: var(--theme-blue-d);
   display: flex;
   filter: brightness(0.45);
-  height: 100%;
   overflow: hidden;
   position: absolute;
   right: 0;
@@ -168,9 +237,8 @@ button {
   width: 100%;
   z-index: 1;
 }
-/* -- HERO ↑↑ --*/
-
-/* -- ORADORES ↓↓ --*/
+/* -- HERO ↑↑ -- */
+/* -- ORADORES ↓↓ -- */
 #cards-section {
   background-color: rgb(255, 255, 255);
   height: 100vh; /* cambiar para que se ajuste a contentido luego*/
@@ -186,6 +254,7 @@ button {
 .card {
   background-color: transparent;
   border: none;
+  max-width: 400px;
 }
 
 .card-image {
@@ -216,8 +285,7 @@ button {
   font-size: 0.75rem;
   line-height: 22px;
 }
-/* -- ORADORES ↑↑ --*/
-
+/* -- ORADORES ↑↑ -- */
 /* -- DESTINO ↓↓ -- */
 #destinos-section {
   background-color: var(--theme-grey);
@@ -253,14 +321,13 @@ button {
   width: 100%;
 }
 /* -- DESTINO ↑↑ -- */
-
+/* -- FORM ↓↓ -- */
 #form-section {
   align-items: center;
   background-color: white;
   display: flex;
   flex-direction: column;
-  padding-bottom: 1rem;
-  padding-top: 0.5rem;
+  padding: 0.5rem 3rem 2rem 3rem;
 }
 
 #form-section p {
@@ -305,28 +372,32 @@ textarea {
 }
 
 #btn-submit {
-  padding: 0.5rem;
   background-color: var(--theme-green-l);
-  color: white;
-  border: none;
   border-radius: 4px;
+  border: none;
+  color: white;
   font-size: 1rem;
   margin-top: 1rem;
+  padding: 0.5rem;
 }
-/* ---- MAIN ↑↑ ----*/
+/* -- FORM ↑↑ -- */
+/* ---- MAIN ↑↑ ---- */
 
-/* ---- FOOTER ↓↓ ----*/
+/* ---- FOOTER ↓↓ ---- */
 footer {
   background: rgb(27,53,66);
   background: linear-gradient(90deg, rgba(27,53,66,1) 0%, rgba(28,81,112,1) 100%); 
-  height: var(--footer-height);
-  padding: 0px 9.5rem 0 10.5rem;
+  min-height: var(--footer-height);
+  height: auto;
 }
 
 #footer-nav {
-  display: grid;
   height: 100%;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  min-height: var(--footer-height);
 }
 
 #footer-nav a {
@@ -341,4 +412,114 @@ footer {
   text-align: center;
   text-decoration: none;
 }
-/* ---- FOOTER ↑↑ ----*/
+/* ---- FOOTER ↑↑ ---- */
+
+/* ---- MEDIA-QUERIES ↓↓ ---- */
+@media (max-width: 1184px) {
+  #header-navbar {
+    display: none;
+  }
+
+  #header-dropdown {
+    display: block;
+  }
+}
+
+/* -- TABLET DISPLAY -- */
+@media (max-width: 840px) { 
+  #main-header {
+    padding: 0 2.5rem 0 2rem;
+  }
+
+  #hero-section article {
+    padding-top: 0;
+  }
+
+  #cards-section {
+    height: auto;
+  }
+  #cards-container {
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem;
+  }
+
+  #destinos-section {
+    grid-template-columns: 1fr;
+  }
+  #destinos-section figure {
+    display: flex;
+    max-height: 320px;
+    overflow: hidden;
+  }
+  #destinos-section article {
+    padding: 3rem;
+  }
+  #destinos-section p {
+    margin-bottom: 1rem
+  }
+
+  footer {
+    height: auto;
+    padding: 0 1rem;
+  }
+  #footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+/* -- SMART-PHONE DISPLAY -- */
+@media (max-width: 420px) {
+  #main-header {
+    padding: 0 1.5rem 0 1rem;
+  }
+  #header-logo span {
+    display: none;
+  }
+
+  #hero-section {
+    padding: 0rem 2rem;
+  }
+  #hero-section article {
+    padding-top: 0;
+    text-align: left;
+  }
+  #hero-section nav {
+    flex-direction: column;
+    justify-content: start;
+    width: fit-content;
+  }
+
+  #cards-container {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+
+  #destinos-section article {
+    padding: 2rem;
+  }
+
+  #form-section {
+    padding: 0 2rem 2rem 2rem;
+  }
+  #form-personal-input {
+    gap: 1rem;
+    flex-direction: column;
+  }
+  #form-personal-input p {
+    margin-bottom: 1rem;
+  }
+  #form-personal-input label {
+    width: 100%;
+  }
+  input, textarea {
+    padding: 5px 10px;
+  }
+
+  #footer-nav {
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+/* ---- MEDIA-QUERIES ↑↑ ---- */
