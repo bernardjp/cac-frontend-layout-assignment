@@ -203,6 +203,17 @@ button {
   z-index: 2;
 }
 
+#hero-section a {
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  font-size: inherit;
+  padding: 0.45rem 0.8rem;
+  text-decoration: none;
+}
+
 #hero-section h2 {
   font-size: 2rem;
   font-weight: bold;
