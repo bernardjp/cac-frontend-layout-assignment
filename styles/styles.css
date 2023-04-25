@@ -230,7 +230,6 @@ button {
   background-color: var(--theme-blue-d);
   display: flex;
   filter: brightness(0.45);
-  /* height: 100%; */
   overflow: hidden;
   position: absolute;
   right: 0;
@@ -328,8 +327,7 @@ button {
   background-color: white;
   display: flex;
   flex-direction: column;
-  padding-bottom: 1rem;
-  padding-top: 0.5rem;
+  padding: 0.5rem 3rem 2rem 3rem;
 }
 
 #form-section p {
@@ -389,14 +387,17 @@ textarea {
 footer {
   background: rgb(27,53,66);
   background: linear-gradient(90deg, rgba(27,53,66,1) 0%, rgba(28,81,112,1) 100%); 
-  height: var(--footer-height);
-  padding: 0px 9.5rem 0 10.5rem;
+  min-height: var(--footer-height);
+  height: auto;
 }
 
 #footer-nav {
-  display: grid;
   height: 100%;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  min-height: var(--footer-height);
 }
 
 #footer-nav a {
@@ -406,7 +407,6 @@ footer {
   font-size: 0.84rem;
   justify-content: center;
   line-height: 1.4rem;
-  margin: auto;
   max-width: 80px;
   padding: 1rem;
   text-align: center;
@@ -427,7 +427,46 @@ footer {
 
 /* -- TABLET DISPLAY -- */
 @media (max-width: 840px) { 
+  #main-header {
+    padding: 0 2.5rem 0 2rem;
+  }
 
+  #hero-section article {
+    padding-top: 0;
+  }
+
+  #cards-section {
+    height: auto;
+  }
+  #cards-container {
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem;
+  }
+
+  #destinos-section {
+    grid-template-columns: 1fr;
+  }
+  #destinos-section figure {
+    display: flex;
+    max-height: 320px;
+    overflow: hidden;
+  }
+  #destinos-section article {
+    padding: 3rem;
+  }
+  #destinos-section p {
+    margin-bottom: 1rem
+  }
+
+  footer {
+    height: auto;
+    padding: 0 1rem;
+  }
+  #footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 }
 
 /* -- SMART-PHONE DISPLAY -- */
@@ -452,22 +491,13 @@ footer {
     width: fit-content;
   }
 
-  #cards-section {
-    height: auto;
-  }
   #cards-container {
     grid-template-columns: 1fr;
     padding: 2rem;
   }
 
-  #destinos-section {
-    grid-template-columns: 1fr;
-  }
   #destinos-section article {
     padding: 2rem;
-  }
-  #destinos-section p {
-    margin-bottom: 1rem
   }
 
   #form-section {
@@ -487,10 +517,6 @@ footer {
     padding: 5px 10px;
   }
 
-  footer {
-    height: auto;
-    padding: 0 1rem;
-  }
   #footer-nav {
     height: auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
