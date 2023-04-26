@@ -246,28 +246,6 @@ button {
   z-index: 2;
 }
 
-/* #hero-section a {
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  font-size: inherit;
-  padding: 0.45rem 0.8rem;
-  text-decoration: none;
-  transition: 0.2s;
-} */
-/* #hero-section a:first-child {
-  background-color: transparent;
-  border: 1px solid white;
-} */
-/* #hero-section a:first-child:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-  color: white;
-} */
-/* #hero-section a:first-child:active {
-  background-color: white;
-  color: var(--theme-grey);
-} */
-
 #hero-section h2 {
   font-size: 2rem;
   font-weight: bold;
@@ -371,7 +349,35 @@ button {
   padding: 0.2rem 0.4rem;
 }
 
-#destino-img {
+#destinos-section figure {
+  padding-bottom: 55%; /* this set the carousel image ratio */
+  position: relative;
+}
+
+#carousel-container {
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+#carousel-container:hover .carousel-btn {
+  display: block;
+}
+.carousel-btn {
+  display: none;
+}
+
+.carousel-inner { /* overwrites Boostrap default configuration */
+  align-items: end;
+  display: flex;
+}
+.carousel-item.active { /* overwrites Boostrap default configuration */
+  display: flex;
+}
+
+.destino-img {
   width: 100%;
 }
 /* -- DESTINO ↑↑ -- */
@@ -482,13 +488,30 @@ footer {
 /* ---- FOOTER ↑↑ ---- */
 
 /* ---- MEDIA-QUERIES ↓↓ ---- */
-@media (max-width: 1184px) {
+@media (max-width: 1180px) {
   #header-navbar {
     display: none;
   }
 
   #header-dropdown {
     display: block;
+  }
+}
+
+@media (max-width: 960px) {
+  #destinos-section {
+    grid-template-columns: 1fr;
+  }
+  #destinos-section figure {
+    display: flex;
+    max-height: 320px;
+    overflow: hidden;
+  }
+  #destinos-section article {
+    padding: 3rem;
+  }
+  #destinos-section p {
+    margin-bottom: 1rem
   }
 }
 
@@ -510,19 +533,8 @@ footer {
     padding: 3rem;
   }
 
-  #destinos-section {
-    grid-template-columns: 1fr;
-  }
-  #destinos-section figure {
-    display: flex;
-    max-height: 320px;
-    overflow: hidden;
-  }
-  #destinos-section article {
-    padding: 3rem;
-  }
-  #destinos-section p {
-    margin-bottom: 1rem
+  .carousel-btn {
+    display: block;
   }
 
   footer {
