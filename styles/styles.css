@@ -362,6 +362,12 @@ button {
   right: 0;
   top: 0;
 }
+#carousel-container:hover .carousel-btn {
+  display: block;
+}
+.carousel-btn {
+  display: none;
+}
 
 .carousel-inner { /* overwrites Boostrap default configuration */
   align-items: end;
@@ -482,13 +488,30 @@ footer {
 /* ---- FOOTER ↑↑ ---- */
 
 /* ---- MEDIA-QUERIES ↓↓ ---- */
-@media (max-width: 1184px) {
+@media (max-width: 1180px) {
   #header-navbar {
     display: none;
   }
 
   #header-dropdown {
     display: block;
+  }
+}
+
+@media (max-width: 960px) {
+  #destinos-section {
+    grid-template-columns: 1fr;
+  }
+  #destinos-section figure {
+    display: flex;
+    max-height: 320px;
+    overflow: hidden;
+  }
+  #destinos-section article {
+    padding: 3rem;
+  }
+  #destinos-section p {
+    margin-bottom: 1rem
   }
 }
 
@@ -510,19 +533,8 @@ footer {
     padding: 3rem;
   }
 
-  #destinos-section {
-    grid-template-columns: 1fr;
-  }
-  #destinos-section figure {
-    display: flex;
-    max-height: 320px;
-    overflow: hidden;
-  }
-  #destinos-section article {
-    padding: 3rem;
-  }
-  #destinos-section p {
-    margin-bottom: 1rem
+  .carousel-btn {
+    display: block;
   }
 
   footer {
