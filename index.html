@@ -1,205 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter">
-  <link rel="stylesheet" href="./styles/styles.css">
-  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
-  <title>Codo a Codo 4.0</title>
-</head>
-<body>
-  <header id="main-header">
-    <div id="header-logo">
-      <a href="#">
-        <img id="header-img" src="./assets/images/codoacodo.png" alt="cac_logo">
-      </a>
-      <span>Conf Bs As</span>
-    </div>
-    <nav id="header-navbar">
-      <a class="header-links" href="#hero-section">La conferencia</a>
-      <a class="header-links" href="#cards-section">Los oradores</a>
-      <a class="header-links" href="#destinos-section">El lugar y la fecha</a>
-      <a class="header-links" href="#form-section">Conviértete en orador</a>
-      <a class="header-links" href="https://www.ticketek.com.ar/especiales" target="_blank">Comprar tickets</a>
-    </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <title>Codo a Codo 4.0</title>
+  </head>
+  <body>
+    <header id="main-header">
+      <div id="header-logo">
+        <a href="#">
+          <img
+            id="header-img"
+            src="./assets/images/codoacodo.png"
+            alt="cac_logo"
+          />
+        </a>
+        <span>Conf Bs As</span>
+      </div>
+      <nav id="header-navbar">
+        <a class="header-links" href="#hero-section">La conferencia</a>
+        <a class="header-links" href="#cards-section">Los oradores</a>
+        <a class="header-links" href="#destinos-section">El lugar y la fecha</a>
+        <a class="header-links" href="#form-section">Conviértete en orador</a>
+        <a
+          class="header-links"
+          href="https://www.ticketek.com.ar/especiales"
+          target="_blank"
+          >Comprar tickets</a
+        >
+      </nav>
 
-    <div id="header-dropdown" class="dropdown">
-      <button id="dropdown-button" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
-        </svg>
-        <svg id="xmark-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-          <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
-        </svg>
-      </button>
-      <ul id="dropdown-navbar" class="dropdown-menu">
-        <a class="dropdown-item header-links" href="#hero-section">La conferencia</a>
-        <a class="dropdown-item header-links" href="#cards-section">Los oradores</a>
-        <a class="dropdown-item header-links" href="#destinos-section">El lugar y la fecha</a>
-        <a class="dropdown-item header-links" href="#form-section">Conviértete en orador</a>
-        <a class="dropdown-item header-links" href="https://www.ticketek.com.ar/especiales" target="_blank">Comprar tickets</a>
-      </ul>
-    </div>
-  </header>
+      <div id="header-dropdown" class="dropdown">
+        <button
+          id="dropdown-button"
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <svg
+            id="menu-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+            />
+          </svg>
+          <svg
+            id="xmark-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 384 512"
+          >
+            <path
+              d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+            />
+          </svg>
+        </button>
+        <ul id="dropdown-navbar" class="dropdown-menu">
+          <a class="dropdown-item header-links" href="#hero-section"
+            >La conferencia</a
+          >
+          <a class="dropdown-item header-links" href="#cards-section"
+            >Los oradores</a
+          >
+          <a class="dropdown-item header-links" href="#destinos-section"
+            >El lugar y la fecha</a
+          >
+          <a class="dropdown-item header-links" href="#form-section"
+            >Conviértete en orador</a
+          >
+          <a
+            class="dropdown-item header-links"
+            href="https://www.ticketek.com.ar/especiales"
+            target="_blank"
+            >Comprar tickets</a
+          >
+        </ul>
+      </div>
+    </header>
 
-  <main>
-    <section id="hero-section">
-      <article>
-        <h2>Conf Bs As</h2>
-        <p>Bs As llega por primera vez a Argentina. un evento para compartir con nuestra comunidad el conocimiento y experiencia de los experto que están creando el futuro de Internet. Ven a conocer a miembros del evente, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!
+    <main>
+      <section id="hero-section">
+        <article>
+          <h2>Conf Bs As</h2>
+          <p>
+            Bs As llega por primera vez a Argentina. un evento para compartir
+            con nuestra comunidad el conocimiento y experiencia de los experto
+            que están creando el futuro de Internet. Ven a conocer a miembros
+            del evente, a otros estudiantes de Codo a Codo y los oradores de
+            primer nivel que tenemos para ti. Te esperamos!
+          </p>
+          <nav>
+            <a class="anchor-btn" href="#form-section">Quiero ser orador</a>
+            <a
+              class="anchor-btn btn-green"
+              href="https://www.ticketek.com.ar/especiales"
+              target="_blank"
+              >Comprar tickets</a
+            >
+          </nav>
+        </article>
+        <div id="hero-carousel">
+          <div class="carousel slide h-100" data-bs-ride="carousel">
+            <!-- <div class="carousel slide h-100"> -->
+            <div class="carousel-inner h-100">
+              <div class="carousel-item active">
+                <img
+                  src="./assets/images/ba1.jpg"
+                  class="carousel-image"
+                  alt="buenos-aires-img1"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/images/ba2.jpg"
+                  class="carousel-image"
+                  alt="buenos-aires-img2"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/images/ba3.jpg"
+                  class="carousel-image"
+                  alt="buenos-aires-img3"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cards-section">
+        <div class="section-title">
+          <span>conoce a los</span>
+          <h2>oradores</h2>
+        </div>
+        <div id="cards-container">
+          <div class="card">
+            <img
+              class="card-image"
+              src="./assets/images/steve.jpg"
+              alt="steve_img"
+            />
+            <div class="card-content">
+              <header>
+                <div>
+                  <span class="card-badge badge-yellow">JavaScript</span>
+                  <span class="card-badge badge-blue">React</span>
+                </div>
+                <h4 class="card-name">Steve Jobs</h4>
+              </header>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Blanditiis architecto harum commodi natus officiis similique
+                quisquam qui deleniti eligendi adipisci ex, repellendus
+                molestias aperiam quod autem expedita maiores totam? Architecto.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              class="card-image"
+              src="./assets/images/bill.jpg"
+              alt="bill_img"
+            />
+            <div class="card-content">
+              <header>
+                <div>
+                  <span class="card-badge badge-yellow">JavaScript</span>
+                  <span class="card-badge badge-blue">React</span>
+                </div>
+                <h4 class="card-name">Bill Gates</h4>
+              </header>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Blanditiis architecto harum commodi natus officiis similique
+                quisquam qui deleniti eligendi adipisci ex, repellendus
+                molestias aperiam quod autem expedita maiores totam? Architecto.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              class="card-image"
+              src="./assets/images/ada.jpg"
+              alt="ada_img"
+            />
+            <div class="card-content">
+              <header>
+                <div>
+                  <span class="card-badge badge-grey">Negocios</span>
+                  <span class="card-badge badge-red">Startups</span>
+                </div>
+                <h4 class="card-name">Ada Lovelace</h4>
+              </header>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Blanditiis architecto harum commodi natus officiis similique
+                quisquam qui deleniti eligendi adipisci ex, repellendus
+                molestias aperiam quod autem expedita maiores totam? Architecto.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="destinos-section">
+        <figure>
+          <div id="carousel-container" class="carousel slide">
+            <div class="carousel-inner h-100">
+              <div class="carousel-item active">
+                <img
+                  class="destino-img"
+                  src="./assets/images/honolulu.jpg"
+                  alt="honolulu_img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="destino-img"
+                  src="./assets/images/hawaii.jpg"
+                  alt="hawaii_img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="destino-img"
+                  src="./assets/images/hawaii2.jpg"
+                  alt="hawaii2_img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="destino-img"
+                  src="./assets/images/hawaii3.jpg"
+                  alt="hawaii3_img"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-btn carousel-control-prev"
+              type="button"
+              data-bs-target="#carousel-container"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-btn carousel-control-next"
+              type="button"
+              data-bs-target="#carousel-container"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </figure>
+        <article>
+          <h2>Bs As - Octubre</h2>
+          <p>
+            Buenos Aires es la provincia y localidad más grande del estado de
+            Argentina, en los Estados Unidos. Honolulu es la más sureña de entre
+            las principales ciudades estadounidenses. Aunque el nombre de
+            Honolulu se refiere al área urbana en la costa sureste de la isla de
+            Oahu, la ciudad y el condade de Honolulu han formado una
+            ciudad-condado consolidada que cubre toda la ciudad (aproximadamente
+            600 km2 de superficie).
+          </p>
+          <a
+            class="anchor-btn"
+            href="https://www.eventbrite.com/"
+            target="_blank"
+            >Conocé más</a
+          >
+        </article>
+      </section>
+
+      <section id="form-section">
+        <div class="section-title">
+          <span>conviértete en un</span>
+          <h2>orador</h2>
+        </div>
+        <p>
+          Anótate como orador para dar una charla ignite. Cuéntanos de qué
+          quieres hablar!
         </p>
-        <nav>
-          <a class="anchor-btn" href="#form-section">Quiero ser orador</a>
-          <a class="anchor-btn btn-green" href="https://www.ticketek.com.ar/especiales" target="_blank">Comprar tickets</a>
-        </nav>
-      </article>
-      <div id="hero-carousel">
-        <div class="carousel slide h-100" data-bs-ride="carousel">
-          <div class="carousel-inner h-100">
-            <div class="carousel-item active">
-              <img src="./assets/images/ba1.jpg" class="carousel-image w-100" alt="buenos-aires-img1">
-            </div>
-            <div class="carousel-item">
-              <img src="./assets/images/ba2.jpg" class="carousel-image w-100" alt="buenos-aires-img2">
-            </div>
-            <div class="carousel-item">
-              <img src="./assets/images/ba3.jpg" class="carousel-image w-100" alt="buenos-aires-img3">
-            </div>
+        <form id="form-container" action="/" method="post">
+          <div id="form-personal-input">
+            <label for="name">
+              <input type="text" id="name" name="name" placeholder="Nombre" />
+            </label>
+            <label for="last-name">
+              <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                placeholder="Apellido"
+              />
+            </label>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="cards-section">
-      <div class="section-title">
-        <span>conoce a los</span>
-        <h2>oradores</h2>
-      </div>
-      <div id="cards-container">
-        <div class="card">
-          <img class="card-image" src="./assets/images/steve.jpg" alt="steve_img">
-          <div class="card-content">
-            <header>
-              <div>
-                <span class="card-badge badge-yellow">JavaScript</span>
-                <span class="card-badge badge-blue">React</span>
-              </div>
-              <h4 class="card-name">Steve Jobs</h4>
-            </header>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis architecto harum commodi natus officiis similique quisquam qui deleniti eligendi adipisci ex, repellendus molestias aperiam quod autem expedita maiores totam? Architecto.
-            </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img class="card-image" src="./assets/images/bill.jpg" alt="bill_img">
-          <div class="card-content">
-            <header>
-              <div>
-                <span class="card-badge badge-yellow">JavaScript</span>
-                <span class="card-badge badge-blue">React</span>
-              </div>
-              <h4 class="card-name">Bill Gates</h4>
-            </header>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis architecto harum commodi natus officiis similique quisquam qui deleniti eligendi adipisci ex, repellendus molestias aperiam quod autem expedita maiores totam? Architecto.
-            </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img class="card-image" src="./assets/images/ada.jpg" alt="ada_img">
-          <div class="card-content">
-            <header>
-              <div>
-                <span class="card-badge badge-grey">Negocios</span>
-                <span class="card-badge badge-red">Startups</span>
-              </div>
-              <h4 class="card-name">Ada Lovelace</h4>
-            </header>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis architecto harum commodi natus officiis similique quisquam qui deleniti eligendi adipisci ex, repellendus molestias aperiam quod autem expedita maiores totam? Architecto.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="destinos-section">
-      <figure>
-        <div id="carousel-container" class="carousel slide">
-          <div class="carousel-inner h-100">
-            <div class="carousel-item active">
-              <img class="destino-img" src="./assets/images/honolulu.jpg" alt="honolulu_img">
-            </div>
-            <div class="carousel-item">
-              <img class="destino-img" src="./assets/images/hawaii.jpg" alt="hawaii_img">
-            </div>
-            <div class="carousel-item">
-              <img class="destino-img" src="./assets/images/hawaii2.jpg" alt="hawaii2_img">
-            </div>
-            <div class="carousel-item">
-              <img class="destino-img" src="./assets/images/hawaii3.jpg" alt="hawaii3_img">
-            </div>
-          </div>
-          <button class="carousel-btn carousel-control-prev" type="button" data-bs-target="#carousel-container" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-btn carousel-control-next" type="button" data-bs-target="#carousel-container" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </figure>
-      <article>
-        <h2>Bs As - Octubre</h2>
-        <p>Buenos Aires es la provincia y localidad más grande del estado de Argentina, en los Estados Unidos. Honolulu es la más sureña de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el condade de Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad (aproximadamente 600 km2 de superficie).
-        </p>
-        <a class="anchor-btn" href="https://www.eventbrite.com/" target="_blank">Conocé más</a>
-      </article>
-    </section>
-
-    <section id="form-section">
-      <div class="section-title">
-        <span>conviértete en un</span>
-        <h2>orador</h2>
-      </div>
-      <p>Anótate como orador para dar una charla ignite. Cuéntanos de qué quieres hablar!</p>
-      <form id="form-container" action="/" method="post">
-        <div id="form-personal-input">
-          <label for="name">
-            <input type="text" id="name" name="name" placeholder="Nombre">
+          <label for="message">
+            <textarea
+              id="message"
+              name="message"
+              rows="3"
+              placeholder="Sobre qué quieres hablar?"
+            ></textarea>
           </label>
-          <label for="last-name">
-            <input type="text" id="last-name" name="last-name" placeholder="Apellido">
-          </label>
-        </div>
-        <label for="message">
-          <textarea id="message" name="message" rows="3" placeholder="Sobre qué quieres hablar?"></textarea>
-        </label>
-        <span>Recuerda incluir un título para tu charla</span>
-        <input id="btn-submit" type="submit" value="Enviar">
-      </form>
-    </section>
-  </main>
+          <span>Recuerda incluir un título para tu charla</span>
+          <input id="btn-submit" type="submit" value="Enviar" />
+        </form>
+      </section>
+    </main>
 
-  <footer>
-    <nav id="footer-nav">
-      <a href="#" target="_blank">Preguntas frecuentes</a>
-      <a href="#" target="_blank">Contáctanos</a>
-      <a href="#" target="_blank">Prensa</a>
-      <a href="#" target="_blank">Conferencias</a>
-      <a href="#" target="_blank">Términos y condiciones</a>
-      <a href="#" target="_blank">Privacidad</a>
-      <a href="#" target="_blank">Estudiantes</a>
-    </nav>
-  </footer>
-</body>
-<script>
-  document.getElementById("form-section").addEventListener("submit", (e) => {e.preventDefault()})
-</script>
+    <footer>
+      <nav id="footer-nav">
+        <a href="#" target="_blank"><span>Preguntas frecuentes</span></a>
+        <a href="#" target="_blank"><span>Contáctanos</span></a>
+        <a href="#" target="_blank"><span>Prensa</span></a>
+        <a href="#" target="_blank"><span>Conferencias</span></a>
+        <a href="#" target="_blank"><span>Términos y condiciones</span></a>
+        <a href="#" target="_blank"><span>Privacidad</span></a>
+        <a href="#" target="_blank"><span>Estudiantes</span></a>
+      </nav>
+    </footer>
+  </body>
+  <script>
+    document.getElementById('form-section').addEventListener('submit', (e) => {
+      e.preventDefault();
+    });
+  </script>
 </html>
