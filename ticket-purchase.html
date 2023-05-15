@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <title>Purchase Tickets</title>
+  </head>
+  <body>
+    <header id="main-header">
+      <div id="header-logo">
+        <a href="#">
+          <img
+            id="header-img"
+            src="./assets/images/codoacodo.png"
+            alt="cac_logo"
+          />
+        </a>
+        <span>Conf Bs As</span>
+      </div>
+      <nav id="header-navbar">
+        <a class="header-links" href="/index.html#main-header"
+          >La conferencia</a
+        >
+        <a class="header-links" href="/index.html#cards-section"
+          >Los oradores</a
+        >
+        <a class="header-links" href="/index.html#destinos-section"
+          >El lugar y la fecha</a
+        >
+        <a class="header-links" href="/index.html#form-section"
+          >Conviértete en orador</a
+        >
+        <a class="header-links" href="/ticket-purchase.html">Comprar tickets</a>
+      </nav>
+
+      <div id="header-dropdown" class="dropdown">
+        <button
+          id="dropdown-button"
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <svg
+            id="menu-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+            />
+          </svg>
+          <svg
+            id="xmark-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 384 512"
+          >
+            <path
+              d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+            />
+          </svg>
+        </button>
+        <ul id="dropdown-navbar" class="dropdown-menu">
+          <a class="dropdown-item header-links" href="#hero-section"
+            >La conferencia</a
+          >
+          <a class="dropdown-item header-links" href="#cards-section"
+            >Los oradores</a
+          >
+          <a class="dropdown-item header-links" href="#destinos-section"
+            >El lugar y la fecha</a
+          >
+          <a class="dropdown-item header-links" href="#form-section"
+            >Conviértete en orador</a
+          >
+          <a
+            class="dropdown-item header-links"
+            href="https://www.ticketek.com.ar/especiales"
+            target="_blank"
+            >Comprar tickets</a
+          >
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section id="cart-section">
+        <div id="discount-card-container">
+          <div id="student-discount" class="discount-card">
+            <h3>Estudiante</h3>
+            <span>Tienen un descuento</span>
+            <span>80%</span>
+            <span>*presentar documentación</span>
+          </div>
+          <div id="trainee-discount" class="discount-card">
+            <h3>Trainee</h3>
+            <span>Tienen un descuento</span>
+            <span>50%</span>
+            <span>*presentar documentación</span>
+          </div>
+          <div id="junior-discount" class="discount-card active">
+            <h3>Junior</h3>
+            <span>Tienen un descuento</span>
+            <span>15%</span>
+            <span>*presentar documentación</span>
+          </div>
+        </div>
+        <div class="section-title">
+          <span>VENTA</span>
+          <h2>VALOR DE TICKET $200</h2>
+        </div>
+        <form id="form-container" action="/" method="post">
+          <div id="form-personal-input">
+            <label for="name">
+              <input type="text" id="name" name="name" placeholder="Nombre" />
+            </label>
+            <label for="last-name">
+              <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                placeholder="Apellido"
+              />
+            </label>
+          </div>
+          <label for="email">
+            <input type="email" id="email" name="email" placeholder="Correo" />
+          </label>
+          <div>
+            <label for="amount">
+              Cantidad
+              <input
+                type="number"
+                id="amount"
+                name="amount"
+                placeholder="Cantidad"
+              />
+            </label>
+            <label for="category">
+              Categoría
+              <select>
+                <option value="student">Estudiante</option>
+                <option value="trainee">Trainee</option>
+                <option value="junior">Junior</option>
+              </select>
+            </label>
+          </div>
+          <div>
+            <!-- cambiar el id por una class -->
+            <button id="btn-submit">Borrar</button>
+            <button id="btn-submit">Resumen</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <nav id="footer-nav">
+        <a href="#" target="_blank"><span>Preguntas frecuentes</span></a>
+        <a href="#" target="_blank"><span>Contáctanos</span></a>
+        <a href="#" target="_blank"><span>Prensa</span></a>
+        <a href="#" target="_blank"><span>Conferencias</span></a>
+        <a href="#" target="_blank"><span>Términos y condiciones</span></a>
+        <a href="#" target="_blank"><span>Privacidad</span></a>
+        <a href="#" target="_blank"><span>Estudiantes</span></a>
+      </nav>
+    </footer>
+  </body>
+  <script>
+    document.getElementById('form-section').addEventListener('submit', (e) => {
+      e.preventDefault();
+    });
+  </script>
+</html>
