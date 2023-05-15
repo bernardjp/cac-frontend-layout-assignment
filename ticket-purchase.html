@@ -159,17 +159,21 @@
             </label>
             <label for="category">
               Categoría
-              <select>
+              <select name="category">
                 <option value="student">Estudiante</option>
                 <option value="trainee">Trainee</option>
                 <option value="junior">Junior</option>
               </select>
             </label>
           </div>
-          <div>
+          <div id="purchase-resume">
+            <p>Total a pagar: $</p>
+            <span id="total"></span>
+          </div>
+          <div id="submit-btn-container">
             <!-- cambiar el id por una class -->
-            <button id="btn-submit">Borrar</button>
-            <button id="btn-submit">Resumen</button>
+            <button class="btn-submit">Borrar</button>
+            <button class="btn-submit">Resumen</button>
           </div>
         </form>
       </section>
@@ -187,9 +191,4 @@
       </nav>
     </footer>
   </body>
-  <script>
-    document.getElementById('form-section').addEventListener('submit', (e) => {
-      e.preventDefault();
-    });
-  </script>
 </html>

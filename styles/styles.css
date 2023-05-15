@@ -278,12 +278,8 @@ button {
 .carousel-item-prev,
 .carousel-item.active {
   display: flex;
-  /* height: 100%; */
 }
 
-.carousel-image {
-  width: 100%;
-}
 /* -- HERO ↑↑ -- */
 /* -- ORADORES ↓↓ -- */
 #cards-section {
@@ -452,7 +448,7 @@ textarea {
   padding: 8px 15px;
 }
 
-#btn-submit {
+.btn-submit {
   background-color: var(--theme-green-l);
   border-radius: 4px;
   border: none;
@@ -462,7 +458,7 @@ textarea {
   padding: 0.5rem;
   transition: 0.2s;
 }
-#btn-submit:hover {
+.btn-submit:hover {
   background-color: var(--theme-green-m);
 }
 /* -- FORM ↑↑ -- */
@@ -517,6 +513,66 @@ footer {
   border-bottom: 2px solid rgba(255, 255, 255, 0.75);
 }
 /* ---- FOOTER ↑↑ ---- */
+
+/* ---- PRUCHASE PAGE ↓↓ ---- */
+#cart-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  min-height: calc(
+    100vh - var(--header-height) - var(--footer-height) - 1px
+  ); /* 1px from borders */
+  padding: 2rem 0;
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#discount-card-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.discount-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid var(--theme-blue-m);
+  border-radius: 4px;
+  padding: 1.5rem;
+}
+.discount-card h3 {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#cart-section #form-container {
+  max-width: 100%;
+}
+
+#purchase-resume {
+  background-color: #cce5ff;
+  border: 1px solid #b8daff;
+  display: inline;
+  margin: 2rem 0;
+}
+#purchase-resume p {
+  color: var(--theme-blue-m);
+  padding: 0.8rem 1rem;
+  margin: 0;
+}
+
+#submit-btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+#submit-btn-container .btn-submit {
+  width: 49%;
+  margin: 0;
+}
+/* ---- PRUCHASE PAGE ↑↑ ---- */
 
 /* ---- MEDIA-QUERIES ↓↓ ---- */
 @media (max-width: 1180px) {
