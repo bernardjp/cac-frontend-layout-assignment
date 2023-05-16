@@ -273,17 +273,6 @@ button {
   display: flex;
   align-items: center;
 }
-
-.carousel-item-next,
-.carousel-item-prev,
-.carousel-item.active {
-  display: flex;
-  /* height: 100%; */
-}
-
-.carousel-image {
-  width: 100%;
-}
 /* -- HERO ↑↑ -- */
 /* -- ORADORES ↓↓ -- */
 #cards-section {
