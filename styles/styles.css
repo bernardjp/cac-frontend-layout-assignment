@@ -66,6 +66,7 @@ button {
   font-size: 1.8rem;
   font-weight: bold;
   margin: 0;
+  text-align: center;
 }
 
 /* ---- UTILITIES ---- */
@@ -516,36 +517,39 @@ footer {
 
 /* ---- PRUCHASE PAGE ↓↓ ---- */
 #cart-section {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   height: 100%;
-  min-height: calc(
-    100vh - var(--header-height) - var(--footer-height) - 1px
-  ); /* 1px from borders */
-  padding: 2rem 0;
-  max-width: 720px;
-  width: 100%;
   margin: 0 auto;
+  max-width: 690px;
+  min-height: calc(100vh - var(--header-height) - var(--footer-height) - 1px);
+  padding: 2rem 1rem;
+  width: 100%;
 }
 
 #discount-card-container {
   display: flex;
-  justify-content: center;
   gap: 0.5rem;
+  justify-content: space-between;
 }
 
 .discount-card {
+  align-items: center;
+  border-radius: 4px;
+  border: 2px solid var(--theme-blue-m);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border: 2px solid var(--theme-blue-m);
-  border-radius: 4px;
   padding: 1.5rem;
+  text-align: center;
 }
 .discount-card h3 {
+  font-size: 1.2rem;
   font-weight: bold;
-  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.discount-card span {
+  font-size: small;
 }
 
 #cart-section #form-container {
@@ -553,15 +557,19 @@ footer {
 }
 
 #purchase-resume {
+  align-items: center;
   background-color: #cce5ff;
   border: 1px solid #b8daff;
-  display: inline;
+  display: flex;
   margin: 2rem 0;
+  padding: 0.8rem 1rem;
 }
 #purchase-resume p {
   color: var(--theme-blue-m);
-  padding: 0.8rem 1rem;
   margin: 0;
+}
+#purchase-resume:last-child p {
+  font-weight: bold;
 }
 
 #submit-btn-container {
@@ -699,6 +707,11 @@ footer {
   input,
   textarea {
     padding: 5px 10px;
+  }
+
+  #discount-card-container {
+    flex-direction: column;
+    width: 100%;
   }
 
   footer {

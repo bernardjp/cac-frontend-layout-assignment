@@ -29,13 +29,13 @@
   <body>
     <header id="main-header">
       <div id="header-logo">
-        <a href="#">
+        <!-- <a href="#">
           <img
             id="header-img"
             src="./assets/images/codoacodo.png"
             alt="cac_logo"
           />
-        </a>
+        </a> -->
         <span>Conf Bs As</span>
       </div>
       <nav id="header-navbar">
@@ -107,22 +107,25 @@
     <main>
       <section id="cart-section">
         <div id="discount-card-container">
-          <div id="student-discount" class="discount-card">
+          <div
+            id="student-discount"
+            class="discount-card border border-primary"
+          >
             <h3>Estudiante</h3>
-            <span>Tienen un descuento</span>
-            <span>80%</span>
+            <p>Tienen un descuento</p>
+            <p class="fw-bold">80%</p>
             <span>*presentar documentación</span>
           </div>
-          <div id="trainee-discount" class="discount-card">
+          <div id="trainee-discount" class="discount-card border border-info">
             <h3>Trainee</h3>
-            <span>Tienen un descuento</span>
-            <span>50%</span>
+            <p>Tienen un descuento</p>
+            <p class="fw-bold">50%</p>
             <span>*presentar documentación</span>
           </div>
-          <div id="junior-discount" class="discount-card active">
+          <div id="junior-discount" class="discount-card border border-warning">
             <h3>Junior</h3>
-            <span>Tienen un descuento</span>
-            <span>15%</span>
+            <p>Tienen un descuento</p>
+            <p class="fw-bold">15%</p>
             <span>*presentar documentación</span>
           </div>
         </div>
@@ -131,36 +134,62 @@
           <h2>VALOR DE TICKET $200</h2>
         </div>
         <form id="form-container" action="/" method="post">
-          <div id="form-personal-input">
+          <div id="form-personal-input" class="gap-2">
             <label for="name">
-              <input type="text" id="name" name="name" placeholder="Nombre" />
+              <input
+                type="text"
+                id="name"
+                class="form-control"
+                name="name"
+                placeholder="Nombre"
+                max="50"
+                required
+              />
             </label>
             <label for="last-name">
               <input
                 type="text"
                 id="last-name"
+                class="form-control"
                 name="last-name"
                 placeholder="Apellido"
+                max="50"
+                required
               />
             </label>
           </div>
           <label for="email">
-            <input type="email" id="email" name="email" placeholder="Correo" />
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              name="email"
+              placeholder="Correo"
+              max="100"
+              required
+            />
           </label>
-          <div>
-            <label for="amount">
+          <div class="d-flex gap-2 mt-3">
+            <label for="amount" class="w-50">
               Cantidad
               <input
                 type="number"
+                class="form-control mt-2"
                 id="amount"
                 name="amount"
                 placeholder="Cantidad"
+                min="0"
+                max="10"
               />
             </label>
-            <label for="category">
+            <label for="category" class="w-50">
               Categoría
-              <select name="category">
-                <option value="student">Estudiante</option>
+              <select
+                id="purchase-category"
+                name="category"
+                class="form-control custom-select mt-2"
+              >
+                <option value="student" selected>Estudiante</option>
                 <option value="trainee">Trainee</option>
                 <option value="junior">Junior</option>
               </select>
@@ -168,10 +197,9 @@
           </div>
           <div id="purchase-resume">
             <p>Total a pagar: $</p>
-            <span id="total"></span>
+            <p id="total">200</p>
           </div>
           <div id="submit-btn-container">
-            <!-- cambiar el id por una class -->
             <button class="btn-submit">Borrar</button>
             <button class="btn-submit">Resumen</button>
           </div>
