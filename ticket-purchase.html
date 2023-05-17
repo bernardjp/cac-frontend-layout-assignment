@@ -113,25 +113,25 @@
           >
             <h3>Estudiante</h3>
             <p>Tienen un descuento</p>
-            <p class="fw-bold">80%</p>
+            <p id="student-discount-rate" class="fw-bold"></p>
             <span>*presentar documentación</span>
           </div>
           <div id="trainee-discount" class="discount-card border border-info">
             <h3>Trainee</h3>
             <p>Tienen un descuento</p>
-            <p class="fw-bold">50%</p>
+            <p id="trainee-discount-rate" class="fw-bold"></p>
             <span>*presentar documentación</span>
           </div>
           <div id="junior-discount" class="discount-card border border-warning">
             <h3>Junior</h3>
             <p>Tienen un descuento</p>
-            <p class="fw-bold">15%</p>
+            <p id="junior-discount-rate" class="fw-bold"></p>
             <span>*presentar documentación</span>
           </div>
         </div>
         <div class="section-title">
           <span>VENTA</span>
-          <h2>VALOR DE TICKET $200</h2>
+          <h2 id="ticket-price">VALOR DE TICKET</h2>
         </div>
         <form id="form-container" action="/" method="post">
           <div id="form-personal-input" class="gap-2">
@@ -146,12 +146,12 @@
                 required
               />
             </label>
-            <label for="last-name">
+            <label for="lastname">
               <input
                 type="text"
-                id="last-name"
+                id="lastname"
                 class="form-control"
-                name="last-name"
+                name="lastname"
                 placeholder="Apellido"
                 max="50"
                 required
@@ -185,23 +185,23 @@
             <label for="category" class="w-50">
               Categoría
               <select
-                id="purchase-category"
+                id="category"
                 name="category"
                 class="form-control custom-select mt-2"
               >
-                <option value="student" selected>Estudiante</option>
-                <option value="trainee">Trainee</option>
-                <option value="junior">Junior</option>
+                <option id="student-option" value="student">Estudiante</option>
+                <option id="trainee-option" value="trainee">Trainee</option>
+                <option id="junior-option" value="junior">Junior</option>
               </select>
             </label>
           </div>
           <div id="purchase-resume">
             <p>Total a pagar: $</p>
-            <p id="total">200</p>
+            <p id="total"></p>
           </div>
           <div id="submit-btn-container">
-            <button class="btn-submit">Borrar</button>
-            <button class="btn-submit">Resumen</button>
+            <button id="reset-btn" class="btn-submit">Borrar</button>
+            <button id="resumen-btn" class="btn-submit">Resumen</button>
           </div>
         </form>
       </section>
@@ -218,5 +218,6 @@
         <a href="#" target="_blank"><span>Estudiantes</span></a>
       </nav>
     </footer>
+    <script src="./app/ticket-purchase.js" type="module"></script>
   </body>
 </html>
