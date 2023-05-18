@@ -1,4 +1,12 @@
-export class Discounts {
+export const FORM_DEFAULT_VALUES = {
+  name: '',
+  lastname: '',
+  email: '',
+  amount: '',
+  category: 'student',
+};
+
+export class Pricing {
   #basePrice = 200;
   #studentRate = 0.8;
   #traineeRate = 0.5;
@@ -18,14 +26,14 @@ export class Discounts {
   }
 
   get student() {
-    return this.studentRate * this.basePrice;
+    return this.basePrice - this.studentRate * this.basePrice;
   }
 
   get trainee() {
-    return this.traineeRate * this.basePrice;
+    return this.basePrice - this.traineeRate * this.basePrice;
   }
 
   get junior() {
-    return this.juniorRate * this.basePrice;
+    return this.basePrice - this.juniorRate * this.basePrice;
   }
 }
