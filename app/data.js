@@ -3,7 +3,7 @@ export class FormValues {
   lastname = '';
   email = '';
   quantity = '';
-  category = 'student';
+  category = '';
 }
 
 export class Pricing {

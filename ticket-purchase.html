@@ -139,8 +139,7 @@
                 required
               />
               <div>
-                <span class="error-message" style="color: red">
-                  * Numbers and special characters are not allowed.
+                <span id="name-error" class="error-message" style="color: red">
                 </span>
               </div>
             </label>
@@ -155,8 +154,11 @@
                 required
               />
               <div>
-                <span class="error-message" style="color: red">
-                  * Numbers and special characters are not allowed.
+                <span
+                  id="lastname-error"
+                  class="error-message"
+                  style="color: red"
+                >
                 </span>
               </div>
             </label>
@@ -172,8 +174,7 @@
               required
             />
             <div>
-              <span class="error-message" style="color: red">
-                * Invalid email format.
+              <span id="email-error" class="error-message" style="color: red">
               </span>
             </div>
           </label>
@@ -187,12 +188,16 @@
                 id="quantity"
                 name="quantity"
                 placeholder="Cantidad"
-                min="0"
+                min="1"
                 max="10"
+                required
               />
               <div>
-                <span class="error-message" style="color: red">
-                  * Select quantity (min: 1 - max: 10)
+                <span
+                  id="quantity-error"
+                  class="error-message"
+                  style="color: red"
+                >
                 </span>
               </div>
             </label>
@@ -202,25 +207,37 @@
                 id="category"
                 name="category"
                 class="form-control custom-select mt-2"
+                required
               >
+                <option id="-option" value="">Seleccione una opción</option>
                 <option id="student-option" value="student">Estudiante</option>
                 <option id="trainee-option" value="trainee">Trainee</option>
                 <option id="junior-option" value="junior">Junior</option>
               </select>
+              <div>
+                <span
+                  id="category-error"
+                  class="error-message"
+                  style="color: red"
+                >
+                </span>
+              </div>
             </label>
           </div>
           <div id="purchase-resume">
-            <div>
-              <p>Nombre Completo:</p>
-              <p id="fullname-display" class="fw-bold">Juan Pablo Bernard</p>
-            </div>
-            <div>
-              <p>Email:</p>
-              <p id="email-display" class="fw-bold">jean@email.com</p>
+            <div id="purchase-personal-info" class="d-none" style="gap: 0">
+              <div>
+                <p>Nombre Completo:</p>
+                <p id="fullname-display" class="fw-bold"></p>
+              </div>
+              <div>
+                <p>Email:</p>
+                <p id="email-display" class="fw-bold"></p>
+              </div>
             </div>
             <div>
               <p>Total a pagar: $</p>
-              <p id="total-display" class="fw-bold">500.00</p>
+              <p id="total-display" class="fw-bold"></p>
             </div>
           </div>
           <div id="submit-btn-container">
