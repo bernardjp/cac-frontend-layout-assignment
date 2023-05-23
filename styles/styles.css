@@ -430,6 +430,13 @@ button {
   width: 50%;
 }
 
+#form-ticket-input {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
 #form-container span {
   color: gray;
   font-size: 0.75rem;
@@ -557,12 +564,17 @@ footer {
 }
 
 #purchase-resume {
-  align-items: center;
+  flex-direction: column;
+  /* align-items: center; */
   background-color: #cce5ff;
   border: 1px solid #b8daff;
   display: flex;
   margin: 2rem 0;
   padding: 0.8rem 1rem;
+}
+#purchase-resume div {
+  display: flex;
+  gap: 0.5rem;
 }
 #purchase-resume p {
   color: var(--theme-blue-m);

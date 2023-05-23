@@ -1,10 +1,10 @@
-export const FORM_DEFAULT_VALUES = {
-  name: '',
-  lastname: '',
-  email: '',
-  amount: '',
-  category: 'student',
-};
+export class FormValues {
+  name = '';
+  lastname = '';
+  email = '';
+  quantity = '';
+  category = 'student';
+}
 
 export class Pricing {
   #basePrice = 200;
@@ -28,11 +28,9 @@ export class Pricing {
   get student() {
     return this.basePrice - this.studentRate * this.basePrice;
   }
-
   get trainee() {
     return this.basePrice - this.traineeRate * this.basePrice;
   }
-
   get junior() {
     return this.basePrice - this.juniorRate * this.basePrice;
   }
