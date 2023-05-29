@@ -66,6 +66,7 @@ button {
   font-size: 1.8rem;
   font-weight: bold;
   margin: 0;
+  text-align: center;
 }
 
 /* ---- UTILITIES ---- */
@@ -273,6 +274,13 @@ button {
   display: flex;
   align-items: center;
 }
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: flex;
+}
+
 /* -- HERO ↑↑ -- */
 /* -- ORADORES ↓↓ -- */
 #cards-section {
@@ -422,6 +430,13 @@ button {
   width: 50%;
 }
 
+#form-ticket-input {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
 #form-container span {
   color: gray;
   font-size: 0.75rem;
@@ -441,7 +456,7 @@ textarea {
   padding: 8px 15px;
 }
 
-#btn-submit {
+.btn-submit {
   background-color: var(--theme-green-l);
   border-radius: 4px;
   border: none;
@@ -451,7 +466,7 @@ textarea {
   padding: 0.5rem;
   transition: 0.2s;
 }
-#btn-submit:hover {
+.btn-submit:hover {
   background-color: var(--theme-green-m);
 }
 /* -- FORM ↑↑ -- */
@@ -506,6 +521,78 @@ footer {
   border-bottom: 2px solid rgba(255, 255, 255, 0.75);
 }
 /* ---- FOOTER ↑↑ ---- */
+
+/* ---- PRUCHASE PAGE ↓↓ ---- */
+#cart-section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 690px;
+  min-height: calc(100vh - var(--header-height) - var(--footer-height) - 1px);
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+#discount-card-container {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.discount-card {
+  align-items: center;
+  border-radius: 4px;
+  border: 2px solid var(--theme-blue-m);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  text-align: center;
+}
+.discount-card h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.discount-card span {
+  font-size: small;
+}
+
+#cart-section #form-container {
+  max-width: 100%;
+}
+
+#purchase-resume {
+  flex-direction: column;
+  /* align-items: center; */
+  background-color: #cce5ff;
+  border: 1px solid #b8daff;
+  display: flex;
+  margin: 2rem 0;
+  padding: 0.8rem 1rem;
+}
+#purchase-resume div {
+  display: flex;
+  gap: 0.5rem;
+}
+#purchase-resume p {
+  color: var(--theme-blue-m);
+  margin: 0;
+}
+#purchase-resume:last-child p {
+  font-weight: bold;
+}
+
+#submit-btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+#submit-btn-container .btn-submit {
+  width: 49%;
+  margin: 0;
+}
+/* ---- PRUCHASE PAGE ↑↑ ---- */
 
 /* ---- MEDIA-QUERIES ↓↓ ---- */
 @media (max-width: 1180px) {
@@ -632,6 +719,11 @@ footer {
   input,
   textarea {
     padding: 5px 10px;
+  }
+
+  #discount-card-container {
+    flex-direction: column;
+    width: 100%;
   }
 
   footer {
