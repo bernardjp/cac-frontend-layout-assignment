@@ -29,7 +29,7 @@ export function formValidation() {
     if (regex.test(text) && text.length <= 50) {
       isLastnameValidated = true;
     } else if (text.length === 0) {
-      isNameValidated = false;
+      isLastnameValidated = false;
       message = 'Campo obligatorio.';
     } else {
       isLastnameValidated = false;
@@ -47,7 +47,7 @@ export function formValidation() {
       isEmailValidated = true;
     } else if (email.length === 0) {
       isEmailValidated = false;
-      message = 'Campo requerido.';
+      message = 'Campo obligatorio.';
     } else {
       isEmailValidated = false;
       message = 'Formato de email inválido.';
@@ -63,7 +63,7 @@ export function formValidation() {
       isQuantityValidated = true;
     } else {
       isQuantityValidated = false;
-      message = '* Select quantity (min: 1 - max: 10)';
+      message = 'Seleccionar cantidad (min: 1 - max: 10)';
     }
 
     return { isValidated: isQuantityValidated, message };
@@ -83,7 +83,7 @@ export function formValidation() {
       message = 'Campo obligatorio.';
     } else {
       isCategoryValidated = false;
-      message = '* Select a category.';
+      message = 'Campo obligatorio.';
     }
 
     return { isValidated: isCategoryValidated, message };

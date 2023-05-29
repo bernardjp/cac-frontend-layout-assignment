@@ -10,7 +10,7 @@ export function initializeLayout() {
   const traineeRateText = document.getElementById('trainee-discount-rate');
   const juniorRateText = document.getElementById('junior-discount-rate');
 
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', (e) => {
     const defaultOption = document.getElementById(`${category}-option`);
 
     defaultOption.setAttribute('selected', true);
@@ -19,6 +19,6 @@ export function initializeLayout() {
     traineeRateText.innerText = `${pricing.traineeRate * 100}%`;
     juniorRateText.innerText = `${pricing.juniorRate * 100}%`;
 
-    resetPurchaseForm();
+    resetPurchaseForm(e);
   });
 }

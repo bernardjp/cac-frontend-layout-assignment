@@ -4,11 +4,7 @@ import { formValidation } from '../utils/validation.js';
 
 // Form Elements
 const form = document.getElementById('form-container');
-const nameInput = document.getElementById('name');
-const lastnameInput = document.getElementById('lastname');
-const emailInput = document.getElementById('email');
-const quantityInput = document.getElementById('quantity');
-const categoryInput = document.getElementById('category');
+const inputs = document.querySelectorAll('.form-control');
 
 // Purchase data display
 const personalInfoDisplay = document.getElementById('purchase-personal-info');
@@ -24,8 +20,6 @@ const resumenBtn = document.getElementById('resumen-btn');
 const validation = formValidation();
 
 function handleInputChange({ target: { name, value } }) {
-  console.log(name, value);
-
   const inputValidation = validation()[name];
   const { isValidated, message } = inputValidation(value);
 
@@ -52,6 +46,7 @@ function getPurchaseData(e) {
     (key) => (formValues[key] = document.getElementById(key).value)
   );
 
+  // Form Validation
   if (validation().checkFullValidation()) {
     const total = calculateTotal(
       formValues.category,
@@ -64,43 +59,46 @@ function getPurchaseData(e) {
     emailDisplay.innerText = formValues.email;
     totalDisplay.innerText = total;
   } else {
-    // Reset information
+    // Shows validation errors under each input
     form.className = 'was-validated';
+    inputs.forEach((input) => handleInputChange({ target: input }));
+
+    // Reset information
     resetInfoDisplay();
-
-    console.log('ERROR: Form is not validated');
   }
-}
-
-function resetInfoDisplay() {
-  console.log('reset info');
-  personalInfoDisplay.classList.replace('flex-column', 'd-none');
-  fullnameDisplay.innerText = '';
-  emailDisplay.innerText = '';
-  totalDisplay.innerText = '';
 }
 
 export function resetPurchaseForm(e) {
   e.preventDefault();
   const defaultFormValues = new FormValues();
 
-  nameInput.value = defaultFormValues.name;
-  lastnameInput.value = defaultFormValues.lastname;
-  emailInput.value = defaultFormValues.email;
-  quantityInput.value = defaultFormValues.quantity;
-  categoryInput.value = defaultFormValues.category;
+  form.classList.remove('was-validated');
+  inputs.forEach((input) => resetInput(input, defaultFormValues[input.name]));
 
   resetInfoDisplay();
 }
 
-export function initializeTicketForm() {
-  form.addEventListener('submit', getPurchaseData);
-  nameInput.addEventListener('input', handleInputChange);
-  lastnameInput.addEventListener('input', handleInputChange);
-  emailInput.addEventListener('input', handleInputChange);
-  quantityInput.addEventListener('input', handleInputChange);
-  categoryInput.addEventListener('input', handleInputChange);
+function resetInfoDisplay() {
+  personalInfoDisplay.classList.replace('flex-column', 'd-none');
+  fullnameDisplay.innerText = '';
+  emailDisplay.innerText = '';
+  totalDisplay.innerText = '';
+}
 
+function resetInput(input, defaultValue) {
+  input.value = defaultValue;
+
+  // Reset input validation display
+  input.classList.remove('is-valid');
+  input.classList.remove('is-invalid');
+
+  // Reset input validation error message
+  const errorMessage = document.getElementById(`${input.name}-error`);
+  errorMessage.innerText = '';
+}
+
+export function initializeTicketForm() {
+  inputs.forEach((input) => input.addEventListener('input', handleInputChange));
   resetBtn.addEventListener('click', resetPurchaseForm);
   resumenBtn.addEventListener('click', getPurchaseData);
 }
